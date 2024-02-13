@@ -1,6 +1,7 @@
 <script>
-    import ToDo from '../components/ToDo.svelte';
-    import Graph from '../components/Graph.svelte';
+    import ToDo from './ToDo.svelte';
+    import Graph from './Graph.svelte';
+    import Test from './Test.svelte';
 
     let placeholder = "What do you need to do? (category - task)";
     let todo_text = "";
@@ -69,6 +70,11 @@
         {/each}
 
         <div class="actions" />
+    </section>
+
+    <section class="graph">
+        <h2 style="margin-top: 15px">todo pie</h2>
+        <Graph bind:todo_category={todo_category}/>
     </section>
 
     <section class="graph">
